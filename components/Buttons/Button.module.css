@@ -1,0 +1,66 @@
+.btn {
+  min-width: 12rem;
+  height: 4rem;
+  padding: 1rem 2rem;
+  border: 2px solid var(--secondary);
+  background: transparent;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn .btn-text {
+  color: var(--secondary);
+  font-size: 1.5rem;
+  font-family: "JosefinSans-Regular";
+}
+
+.btn:hover {
+  border: 3px solid var(--secondary);
+}
+
+.btn.right > *:last-child {
+  margin-left: 1rem;
+}
+.btn.left > *:last-child {
+  margin-right: 1rem;
+}
+
+.btn:active,
+.btn.active {
+  background: var(--secondary);
+}
+
+.btn.active .btn-text,
+.btn:active .btn-text,
+.btn:active > *:last-child,
+.btn:active > *:first-child {
+  color: var(--dark);
+}
+
+.round-btn {
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  height: 3rem;
+  width: 3rem;
+  border: 2px solid var(--secondary);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.round-btn.page-direction {
+  position: fixed;
+  bottom: 2rem;
+  right: 6vmax;
+  z-index: 400;
+}
+
+.round-btn-icon {
+  height: 2.5rem;
+  width: 2.5rem;
+  color: var(--secondary);
+}

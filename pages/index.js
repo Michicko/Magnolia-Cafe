@@ -1,7 +1,14 @@
+import Button from "@/components/Buttons/Button";
+import RoundButton from "@/components/Buttons/RoundButton";
+import Header from "@/components/Pages/Home/Header";
+import { MdOutlineArrowRightAlt } from "react-icons/md";
+
 export default function Home() {
   return (
     <>
-      <h1>Hello Homepage</h1>
+      <Header>
+        <h1>Hello world!</h1>
+      </Header>
     </>
   );
 }
