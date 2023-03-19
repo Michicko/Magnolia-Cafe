@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "Groce";
+  src: url("../../assets/fonts/Groce.ttf");
+}
+
+.heading {
+  font-family: "Groce";
+}
+
+.heading.heading-1 {
+  font-size: 3.5vmax;
+}
+.heading.heading-2 {
+  font-size: 2.5vmax;
+}
+
+.heading.secondary {
+  color: var(--secondary);
+}
+
+.heading.light {
+  color: var(--light);
+}
