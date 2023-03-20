@@ -1,0 +1,68 @@
+@font-face {
+  font-family: "SwistblnkMM";
+  src: url("../assets/fonts/SwistblnkMM.ttf");
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 7rem);
+}
+
+.header-bg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../public/header-banner.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+}
+
+.header-icons {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 4rem;
+  left: 6vmax;
+  z-index: 200;
+}
+
+.header-icons > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.header-logo-box {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-54%, -45%);
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  font-size: 8vmax;
+  color: var(--light);
+  font-family: "SwistblnkMM";
+  text-transform: uppercase;
+  letter-spacing: 1.5rem;
+}
+
+.header-logo-icon {
+  height: 2.5vmax;
+  width: 2.5vmax;
+  color: var(--light);
+}
+
+.header-logo-box > *:first-child {
+  margin-right: 3vmax;
+}
+.header-logo-box > *:last-child {
+  margin-left: 1.5vmax;
+}

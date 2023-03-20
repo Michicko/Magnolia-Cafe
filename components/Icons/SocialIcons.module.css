@@ -1,0 +1,22 @@
+.social-icon {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.social-icon.light {
+  color: var(--light);
+}
+
+.social-icon.dark {
+  color: var(--dark);
+}
+
+.social-icon-link {
+  text-decoration: none;
+  outline: none;
+}
+
+.social-icon-link:hover .social-icon.light,
+.social-icon-link:hover .social-icon.dark {
+  color: var(--secondary);
+}

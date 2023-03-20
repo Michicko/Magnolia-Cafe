@@ -54,7 +54,7 @@
 
 .round-btn.page-direction {
   position: fixed;
-  bottom: 2rem;
+  bottom: 3rem;
   right: 6vmax;
   z-index: 400;
 }
