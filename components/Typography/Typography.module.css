@@ -5,13 +5,14 @@
 
 .heading {
   font-family: "Groce";
+  font-weight: 500;
 }
 
 .heading.heading-1 {
-  font-size: 3.5vmax;
+  font-size: 3.5rem;
 }
 .heading.heading-2 {
-  font-size: 2.5vmax;
+  font-size: 2.5rem;
 }
 
 .heading.secondary {
@@ -20,4 +21,38 @@
 
 .heading.light {
   color: var(--light);
+}
+
+.heading.center {
+  text-align: center;
+}
+
+.text {
+  font-size: 1.4rem;
+}
+
+.text.md {
+  font-family: "JosefinSans-Regular";
+  font-size: 1.5rem;
+}
+
+.text.lg {
+  font-family: "JosefinSans-SemiBold";
+  font-size: 1.8rem;
+}
+
+.text.secondary {
+  color: var(--secondary);
+}
+
+.text.light {
+  color: var(--light);
+}
+
+.text.center {
+  text-align: center;
+}
+
+.text.upper {
+  text-transform: uppercase;
 }

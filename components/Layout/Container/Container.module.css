@@ -1,0 +1,14 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: block;
+  /* background: red; */
+  margin: 0 auto;
+}
+
+.container.lg {
+  max-width: 940px;
+}
+.container.md {
+  max-width: 768px;
+}
