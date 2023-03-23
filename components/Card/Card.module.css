@@ -33,21 +33,30 @@
   border: 2px solid var(--secondary);
 }
 
-.card.treats-1 .card-img-box {
+.card.treats-1 .card-img-box,
+.card.sets-1 .card-img-box {
   z-index: 2;
 }
 
-.card.treats-2 .card-img-box {
+.card.treats-2 .card-img-box,
+.card.sets-2 .card-img-box {
   z-index: 3;
 }
 
-.card.treats-3 .card-img-box {
+.card.treats-3 .card-img-box,
+.card.sets-3 .card-img-box {
   z-index: 2;
 }
 
 .card.treats-1 .outer-border {
   top: 2rem;
   left: 0.8rem;
+  transform: rotate(-4deg);
+}
+
+.card.sets-1 .outer-border {
+  top: 2rem;
+  left: 2rem;
   transform: rotate(-4deg);
 }
 
@@ -58,10 +67,32 @@
   height: 24rem;
 }
 
+.card.sets-2 .outer-border {
+  top: -1.5rem;
+  left: 25%;
+  transform: rotate(2deg);
+  height: 20rem;
+}
+
 .card.treats-3 .outer-border {
   top: 4rem;
   right: 0.8rem;
   transform: rotate(4deg);
+}
+
+.card.sets-3 .outer-border {
+  top: 2rem;
+  right: 1rem;
+  transform: rotate(-2deg);
+  width: 85%;
+}
+
+.card.sets-3 .card-img-box {
+  width: 90%;
+}
+
+.card.sets-2 .outer-border {
+  width: 95%;
 }
 
 .card.with-body.treats-1 .card-body {
@@ -71,7 +102,17 @@
   margin-top: 2rem;
 }
 
+.card.with-body.sets-1 .card-body,
+.card.with-body.sets-3 .card-body {
+  margin-top: 8rem;
+}
+
+.card.with-body.sets-2 .card-body {
+  margin-top: 4rem;
+}
+
 .card-body {
   display: grid;
   grid-row-gap: 1rem;
+  padding: 0 1rem;
 }

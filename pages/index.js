@@ -28,6 +28,24 @@ export default function Home() {
     },
   ];
 
+  const sets = [
+    {
+      name: "chocolate croissant and almond latte macchiato",
+      image: "breakfast-1.jpg",
+      price: 7,
+    },
+    {
+      name: "vegetable bagel and cappuccino",
+      image: "breakfast-2.jpg",
+      price: 11,
+    },
+    {
+      name: "Avocado toast with egg & latte",
+      image: "breakfast-3.jpg",
+      price: 12.5,
+    },
+  ];
+
   return (
     <>
       <header className={`${styles.header} row`}>
@@ -81,7 +99,7 @@ export default function Home() {
         </Container>
       </section>
       {/* sets */}
-      <section className={`${styles.section} ${styles.sets}`}>
+      <section className={`${styles.section} ${styles.periods}`}>
         <Container size={"lg"}>
           <div className={styles["section-inner"]}>
             <Heading
@@ -104,6 +122,23 @@ export default function Home() {
               size={"sm"}
               upper={false}
             />
+            <div className={styles.sets}>
+              {sets.map((set, i) => {
+                const { name, image, price } = set;
+                return (
+                  <Card
+                    withBody={true}
+                    outerBorder={true}
+                    size={"md"}
+                    marker={`sets-${i + 1}`}
+                    image={image}
+                    name={name}
+                    price={price}
+                    key={generateUniqueId()}
+                  />
+                );
+              })}
+            </div>
           </div>
         </Container>
       </section>
