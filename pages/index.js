@@ -6,8 +6,28 @@ import { ImDiamonds } from "react-icons/im";
 import Container from "@/components/Layout/Container/Container";
 import Heading from "@/components/Typography/Heading";
 import Text from "@/components/Typography/Text";
+import Card from "@/components/Card/Card";
+import generateUniqueId from "@/utils/generateUniqueId";
 
 export default function Home() {
+  const treats = [
+    {
+      name: "Gingerbread cappuccino with mashmallow",
+      image: "winter-1.png",
+      price: 4.5,
+    },
+    {
+      name: "Gingerbread cookies",
+      image: "winter-2.jpg",
+      price: 4,
+    },
+    {
+      name: "Peppermint hot chocolatewith mashmallow",
+      image: "winter-3.png",
+      price: 5,
+    },
+  ];
+
   return (
     <>
       <header className={`${styles.header} row`}>
@@ -40,11 +60,53 @@ export default function Home() {
               size={"lg"}
               upper={true}
             />
-            <div className={styles["treats"]}></div>
+            <div className={styles["treats"]}>
+              {treats.map((treat, i) => {
+                const { name, image, price } = treat;
+                return (
+                  <Card
+                    withBody={true}
+                    outerBorder={true}
+                    size={i === treats.length - 1 ? "lg" : "md"}
+                    marker={`treats-${i + 1}`}
+                    image={image}
+                    name={name}
+                    price={price}
+                    key={generateUniqueId()}
+                  />
+                );
+              })}
+            </div>
           </div>
         </Container>
       </section>
       {/* sets */}
+      <section className={`${styles.section} ${styles.sets}`}>
+        <Container size={"lg"}>
+          <div className={styles["section-inner"]}>
+            <Heading
+              type={1}
+              text="Breakfast Sets"
+              color={"light"}
+              center={true}
+            />
+            <Text
+              text={"Start your day right"}
+              center={true}
+              color={"light"}
+              size={"sm"}
+              upper={false}
+            />
+            <Text
+              text={"Buy your breakfast untill 11am"}
+              center={true}
+              color={"light"}
+              size={"sm"}
+              upper={false}
+            />
+          </div>
+        </Container>
+      </section>
     </>
   );
 }

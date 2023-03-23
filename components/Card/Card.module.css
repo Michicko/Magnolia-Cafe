@@ -1,0 +1,77 @@
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.card.with-body {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  grid-row-gap: 2rem;
+}
+
+.card-img-box {
+  position: relative;
+  width: 100%;
+  border: 2px solid var(--secondary);
+}
+
+.card-img-box.lg {
+  height: 27rem;
+}
+
+.card-img-box.md {
+  height: 25rem;
+}
+
+.card .outer-border {
+  height: 25rem;
+  width: 100%;
+  position: absolute;
+  display: block;
+  border: 2px solid var(--secondary);
+}
+
+.card.treats-1 .card-img-box {
+  z-index: 2;
+}
+
+.card.treats-2 .card-img-box {
+  z-index: 3;
+}
+
+.card.treats-3 .card-img-box {
+  z-index: 2;
+}
+
+.card.treats-1 .outer-border {
+  top: 2rem;
+  left: 0.8rem;
+  transform: rotate(-4deg);
+}
+
+.card.treats-2 .outer-border {
+  top: -2rem;
+  left: 35%;
+  transform: rotate(2deg);
+  height: 24rem;
+}
+
+.card.treats-3 .outer-border {
+  top: 4rem;
+  right: 0.8rem;
+  transform: rotate(4deg);
+}
+
+.card.with-body.treats-1 .card-body {
+  margin-top: 4rem;
+}
+.card.with-body.treats-3 .card-body {
+  margin-top: 2rem;
+}
+
+.card-body {
+  display: grid;
+  grid-row-gap: 1rem;
+}

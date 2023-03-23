@@ -29,16 +29,22 @@
 
 .text {
   font-size: 1.4rem;
+  line-height: 1.4;
 }
 
 .text.md {
   font-family: "JosefinSans-Regular";
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 
 .text.lg {
   font-family: "JosefinSans-SemiBold";
   font-size: 1.8rem;
+}
+
+.text.sm {
+  font-family: "JosefinSans-Light";
+  font-size: 1.5rem;
 }
 
 .text.secondary {
@@ -55,4 +61,8 @@
 
 .text.upper {
   text-transform: uppercase;
+}
+
+.text.capitalized {
+  text-transform: capitalize;
 }
