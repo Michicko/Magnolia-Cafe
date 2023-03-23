@@ -1,5 +1,5 @@
 .btn {
-  min-width: 12rem;
+  min-width: 15rem;
   height: 4rem;
   padding: 1rem 2rem;
   border: 2px solid var(--secondary);
@@ -8,6 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
 }
 
 .btn .btn-text {
@@ -30,6 +31,11 @@
 .btn:active,
 .btn.active {
   background: var(--secondary);
+}
+
+.btn.center {
+  margin: 0 auto;
+  width: fit-content;
 }
 
 .btn.active .btn-text,

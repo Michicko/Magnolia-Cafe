@@ -18,6 +18,7 @@ const Card = ({ marker, withBody, outerBorder, size, image, name, price }) => {
           sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               33vw"
+          alt={name}
         />
       </div>
       {outerBorder && <div className={styles["outer-border"]}></div>}

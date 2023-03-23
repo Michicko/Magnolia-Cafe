@@ -119,16 +119,116 @@
   grid-row-end: -1;
 }
 
-.section-inner > *:not(:last-child) {
-  margin-bottom: 1rem;
-}
-
-.section-inner > *:last-child {
-  margin-top: 4rem;
-}
-
 .section.periods {
   width: 100%;
   height: 100%;
   background: var(--primary);
+}
+
+.section.seasons .section-inner > *:first-child,
+.section.periods .section-inner > *:first-child {
+  margin-bottom: 1rem;
+}
+
+.section.menu {
+  width: 100%;
+  height: 100%;
+  background: var(--dark);
+}
+
+.menu-items {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 45% 45%;
+  grid-column-gap: 10%;
+  position: relative;
+}
+
+.menu-btn-icon {
+  color: var(--secondary);
+  height: 2rem;
+  width: 2rem;
+}
+
+.menu-items,
+.treats,
+.sets {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.sets {
+  margin-bottom: 10rem;
+}
+
+.menu-items {
+  position: relative;
+  margin-bottom: 5rem;
+  z-index: 20;
+}
+
+.bean {
+  height: 3.5rem;
+  width: 2rem;
+  position: absolute;
+}
+
+.bean-img-box {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.bean.bean-1 {
+  bottom: -5rem;
+  right: -3rem;
+  transform: rotate(10deg);
+}
+
+.bean.bean-3 {
+  bottom: 5rem;
+  right: -7rem;
+  width: 3.5rem;
+  height: 2.5rem;
+  transform: rotate(-50deg);
+}
+
+.bean.bean-4 {
+  top: -1rem;
+  right: -1rem;
+  width: 2.8rem;
+  transform: rotate(-15deg);
+}
+
+.bean.bean-2 {
+  top: -8rem;
+  left: -7rem;
+  width: 2.5rem;
+  transform: rotate(30deg);
+}
+
+.bean.bean-5 {
+  top: -1rem;
+  left: -12rem;
+  width: 3rem;
+  transform: rotate(65deg);
+}
+
+.grain {
+  height: 6.5rem;
+  width: 5rem;
+  position: absolute;
+  z-index: -1;
+}
+
+.grain.grain-1 {
+  bottom: 7rem;
+  left: -2rem;
+  transform: rotate(-100deg);
+}
+.grain.grain-2 {
+  top: -3rem;
+  right: 0;
+  /* transform: rotate(-100deg); */
 }

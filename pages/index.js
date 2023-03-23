@@ -8,6 +8,9 @@ import Heading from "@/components/Typography/Heading";
 import Text from "@/components/Typography/Text";
 import Card from "@/components/Card/Card";
 import generateUniqueId from "@/utils/generateUniqueId";
+import Button from "@/components/Buttons/Button";
+import { CgArrowLongRight } from "react-icons/cg";
+import Image from "next/image";
 
 export default function Home() {
   const treats = [
@@ -43,6 +46,19 @@ export default function Home() {
       name: "Avocado toast with egg & latte",
       image: "breakfast-3.jpg",
       price: 12.5,
+    },
+  ];
+
+  const menu = [
+    {
+      name: "cappuccino",
+      image: "cappuccino.jpg",
+      price: 5.25,
+    },
+    {
+      name: "iced latte",
+      image: "iced-latte.jpg",
+      price: 4.5,
     },
   ];
 
@@ -139,6 +155,122 @@ export default function Home() {
                 );
               })}
             </div>
+          </div>
+        </Container>
+      </section>
+      <section className={`${styles.section} ${styles.menu}`}>
+        <Container size={"md"}>
+          <div className={styles["section-inner"]}>
+            <Heading type={1} text="Menu" color={"light"} center={true} />
+            <div className={styles["menu-items"]}>
+              {menu.map((item, i) => {
+                const { name, image, price } = item;
+                return (
+                  <Card
+                    withBody={true}
+                    outerBorder={false}
+                    size={"lg"}
+                    marker={`menuItem-${i + 1}`}
+                    image={image}
+                    name={name}
+                    price={price}
+                    key={generateUniqueId()}
+                  />
+                );
+              })}
+              <div className={`${styles.bean} ${styles["bean-1"]}`}>
+                <div className="bean-img-box">
+                  <Image
+                    src={require("../public/1.png")}
+                    alt={"coffee bean"}
+                    fill
+                    sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
+                  />
+                </div>
+              </div>
+              <div className={`${styles.bean} ${styles["bean-3"]}`}>
+                <div className="bean-img-box">
+                  <Image
+                    src={require("../public/3.png")}
+                    alt={"coffee bean"}
+                    fill
+                    sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
+                  />
+                </div>
+              </div>
+              <div className={`${styles.bean} ${styles["bean-4"]}`}>
+                <div className="bean-img-box">
+                  <Image
+                    src={require("../public/4.png")}
+                    alt={"coffee bean"}
+                    fill
+                    sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
+                  />
+                </div>
+              </div>
+              <div className={`${styles.bean} ${styles["bean-2"]}`}>
+                <div className="bean-img-box">
+                  <Image
+                    src={require("../public/2.png")}
+                    alt={"coffee bean"}
+                    fill
+                    sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
+                  />
+                </div>
+              </div>
+              <div className={`${styles.bean} ${styles["bean-5"]}`}>
+                <div className="bean-img-box">
+                  <Image
+                    src={require("../public/5.png")}
+                    alt={"coffee bean"}
+                    fill
+                    sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
+                  />
+                </div>
+              </div>
+              <div className={`${styles.grain} ${styles["grain-1"]}`}>
+                <div className="bean-img-box">
+                  <Image
+                    src={require("../public/grain.png")}
+                    alt={"coffee grains"}
+                    fill
+                    sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
+                  />
+                </div>
+              </div>
+              <div className={`${styles.grain} ${styles["grain-2"]}`}>
+                <div className="bean-img-box">
+                  <Image
+                    src={require("../public/grain.png")}
+                    alt={"coffee grains"}
+                    fill
+                    sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
+                  />
+                </div>
+              </div>
+            </div>
+            <Button
+              type={"link"}
+              link={"/menu"}
+              text={"See menu"}
+              iconDirection={"right"}
+              icon={<CgArrowLongRight className={styles["menu-btn-icon"]} />}
+              center={true}
+            />
           </div>
         </Container>
       </section>
