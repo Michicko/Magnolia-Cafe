@@ -232,3 +232,29 @@
   right: 0;
   /* transform: rotate(-100deg); */
 }
+
+.socials {
+  width: 100%;
+  background: var(--dark);
+  padding: 4rem 0;
+  position: relative;
+  padding-bottom: 6rem;
+}
+
+.socials > *:first-child {
+  margin-bottom: 4rem;
+}
+
+.social-icon {
+  height: 2rem;
+  width: 2rem;
+  color: var(--secondary);
+}
+
+.bean.bean-social {
+  left: 30%;
+  height: 3.5rem;
+  width: 2.5rem;
+  bottom: 2rem;
+  transform: translateX(-30%) rotate(-30deg);
+}

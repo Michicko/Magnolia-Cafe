@@ -24,7 +24,7 @@
 .btn.right > *:last-child {
   margin-left: 1rem;
 }
-.btn.left > *:last-child {
+.btn.left > *:first-child {
   margin-right: 1rem;
 }
 

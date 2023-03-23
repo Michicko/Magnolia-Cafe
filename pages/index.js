@@ -1,6 +1,5 @@
 import styles from "../styles/Home.module.css";
 import SocialIcons from "@/components/Icons/SocialIcons";
-import Header from "@/components/Pages/Home/Header";
 import RoundButton from "@/components/Buttons/RoundButton";
 import { ImDiamonds } from "react-icons/im";
 import Container from "@/components/Layout/Container/Container";
@@ -11,6 +10,8 @@ import generateUniqueId from "@/utils/generateUniqueId";
 import Button from "@/components/Buttons/Button";
 import { CgArrowLongRight } from "react-icons/cg";
 import Image from "next/image";
+import SocialSlider from "@/components/Sliders/SocialSlider";
+import { AiOutlineInstagram } from "react-icons/ai";
 
 export default function Home() {
   const treats = [
@@ -60,6 +61,14 @@ export default function Home() {
       image: "iced-latte.jpg",
       price: 4.5,
     },
+  ];
+
+  const images = [
+    "social-1.jpg",
+    "social-2.jpg",
+    "social-3.jpg",
+    "social-4.jpg",
+    "social-5.jpg",
   ];
 
   return (
@@ -273,6 +282,28 @@ export default function Home() {
             />
           </div>
         </Container>
+      </section>
+      {/* socials */}
+      <section className={styles.socials}>
+        <SocialSlider images={images} />
+        <Button
+          text={"Follow us on instagram"}
+          iconDirection={"left"}
+          icon={<AiOutlineInstagram className={styles["social-icon"]} />}
+          center={true}
+        />
+        <div className={`${styles.bean} ${styles["bean-social"]}`}>
+          <div className="bean-img-box">
+            <Image
+              src={require("../public/4.png")}
+              alt={"coffee bean"}
+              fill
+              sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
+            />
+          </div>
+        </div>
       </section>
     </>
   );
