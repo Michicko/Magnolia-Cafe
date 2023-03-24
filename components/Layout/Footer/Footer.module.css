@@ -1,0 +1,17 @@
+.footer {
+  /* position: relative; */
+  width: 100%;
+  background: var(--dark);
+  overflow: hidden;
+}
+
+.footer-inner {
+  background: transparent url("../../../public/footer-bg.png");
+  height: 25rem;
+  padding: 0 6vmax;
+  width: 100%;
+  min-height: 25rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
